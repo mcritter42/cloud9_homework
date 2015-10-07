@@ -1,0 +1,14 @@
+{
+  "name": "polymer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "repository": "",
+  "author": "mark",
+  "dependencies": {
+    "body-parser": ">=1.14.0",
+    "ejs": ">=v2.3.4",
+    "express": ">=4.13.3",
+    "mysql": ">=2.9.0"
+  }
+}

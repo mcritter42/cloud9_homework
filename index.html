@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>pick a class</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/iron-selector/iron-selector.html"/>
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="bower_components/paper-toast/paper-card.html">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body unresolved>
+  <form action="/" name="form" method='post' onsubmit="return validateForm()"> 
+  <paper-toolbar>
+    <paper-icon-button icon="menu"></paper-icon-button>
+    <span class="flex">Apply for a class</span>
+  </paper-toolbar>
+
+      <paper-card heading="Apply here">
+        <div class="card-content" >
+          <label>First Name</label>
+          <input type="textbox" name="fname"/>
+          <br>
+          <label>Last Name</label>
+          <input type="textbox" name="lname"/>
+          <br>
+          <label>Email</label>
+          <input type="text" name="email"/>
+        </div>
+      </paper-card>
+      <br>
+      <paper-card heading="Pick class">
+        <div class="horizontal-section">
+          <iron-selector selected="0">
+            <input type="radio" name="program" id="management" value="1">management</input>
+            <input type="radio" name="program" id="marketing" value="2">marketing</input>
+            <input type="radio" name="program" id="genbus" value="3">genbus</input>
+            <input type="radio" name="program" id="economics" value="4">economics</input>
+          </iron-selector>
+        </div>
+      </paper-card>
+      <br>
+      <paper-card>
+        <input type="submit" name="submit" id="submit" value="submit">
+        <p><a href="/query">Go to Queries</a></p>
+      </paper-card>
+    
+  <script src="main.js"></script>
+  </form>
+</body>
+</html>
